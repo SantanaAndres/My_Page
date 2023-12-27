@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&family=Righteous&family=Roboto&family=VT323&display=swap");
+
+a:link {
+  text-decoration: none;
+}
+
+.img-responsive {
+  width: 300px;
+}
+
+.titles {
+  font-family: "VT323", monospace;
+}
+
+.head-title {
+  background-color: #3559e0;
+  color: white;
+}
+
+.data_science {
+  width: 600px;
+}
+
+.projects_images {
+  width: 400px;
+}
+
+/* font-family: 'Passion One', sans-serif;
+font-family: 'Righteous', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'VT323', monospace; */

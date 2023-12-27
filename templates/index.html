@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{ bootstrap.load_css() }}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <title>Home</title>
+  </head>
+  <body class="">
+    <div class="head-title container-fluid py-5">
+      <h1 class="titles text-center display-1">Hi my name is Andrés Santana</h1>
+      <div class="container">
+        <img
+          class="rounded-circle img-responsive rounded mx-auto shadow-lg d-block"
+          src="{{ url_for('static', filename='logo.jpeg') }}"
+          alt="just a picture of me"
+        />
+      </div>
+    </div>
+    <h3 class="titles text-center py-5">
+      I really love everything about data science, data analysis and databases
+    </h3>
+    <img
+      class="rounded mx-auto d-block data_science"
+      src="{{ url_for('static', filename='Data-Science.webp') }}"
+      alt=""
+    />
+    <div class="project-area container my-5">
+      <h3 class="titles">Projects</h3>
+      <div class="row">
+        {% if projects|length > 0 and images|length > 0 %} {% for project in
+        range(0, projects|length) %}
+        <div class="col-4 shadow rounded mx-3">
+          <a
+            class="link-dark"
+            href="https://github.com/shewart16/{{ projects[project] }}"
+          >
+            <img
+              src="{{ images[project] }}"
+              class="projects_images p-2 rounded"
+              alt=""
+            />
+            {{ projects[project] }}</a
+          >
+        </div>
+        {% endfor %} {% else %}
+        <h1 class="titles display-1">Sorry I didn't update this yet</h1>
+        {% endif %}
+      </div>
+    </div>
+    {{ bootstrap.load_js() }}
+  </body>
+</html>
